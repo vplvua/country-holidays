@@ -1,21 +1,25 @@
-<mat-toolbar color="primary">
-  <span>{{ pageTitle }}</span>
-  <span class="spacer"></span>
-  <nav mat-tab-nav-bar [tabPanel]="tabPanel">
-    <a
-      mat-tab-link
-      routerLink="/home"
-      routerLinkActive
-      #rla="routerLinkActive"
-      [active]="rla.isActive"
-      [routerLinkActiveOptions]="{ exact: true }"
-    >
-      Home
-    </a>
-  </nav>
-</mat-toolbar>
-<mat-tab-nav-panel #tabPanel></mat-tab-nav-panel>
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <span>{{ pageTitle }}</span>
+      <span class="spacer"></span>
+      <nav mat-tab-nav-bar [tabPanel]="tabPanel">
+        <a
+          mat-tab-link
+          routerLink="/home"
+          routerLinkActive
+          #rla="routerLinkActive"
+          [active]="rla.isActive"
+          [routerLinkActiveOptions]="{ exact: true }"
+        >
+          Home
+        </a>
+      </nav>
+    </mat-toolbar>
+    <mat-tab-nav-panel #tabPanel></mat-tab-nav-panel>
 
-<div class="content-container">
-  <router-outlet></router-outlet>
-</div>
+    <div class="content-container">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
