@@ -17,3 +17,7 @@ test:
 build: ft lint
 	@echo "Building..."
 	npm run build
+
+run: 
+	@echo "Running..."
+	npm run start
