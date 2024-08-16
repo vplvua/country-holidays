@@ -8,9 +8,8 @@ describe('RandomWidgetComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [RandomWidgetComponent]
-    })
-    .compileComponents();
+      imports: [RandomWidgetComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(RandomWidgetComponent);
     component = fixture.componentInstance;

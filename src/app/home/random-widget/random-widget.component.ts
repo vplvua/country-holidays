@@ -5,8 +5,6 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './random-widget.component.html',
-  styleUrl: './random-widget.component.css'
+  styleUrl: './random-widget.component.css',
 })
-export class RandomWidgetComponent {
-
-}
+export class RandomWidgetComponent {}
