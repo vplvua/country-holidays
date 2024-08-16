@@ -71,3 +71,8 @@ This project uses a Makefile to simplify common development tasks:
 - `make test`: Runs the unit tests.
 - `make build`: Formats and lints the code, then builds the application.
 - `make run`: Starts the development server.
+
+## VS Code Setup
+
+1. Copy the .vscode/\*.example files to the same directory, removing the .example extension.
+2. Customize the copied files according to your needs.
