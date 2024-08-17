@@ -42,6 +42,7 @@ import { Country } from '../../models/models';
 export class CountryListComponent implements OnInit, OnChanges {
   @Input() countries!: Country[];
   @Input() isLoading!: boolean;
+  pageTitle = 'Countries';
 
   filteredCountries: Country[] = [];
   searchText = '';

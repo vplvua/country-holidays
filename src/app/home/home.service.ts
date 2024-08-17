@@ -28,4 +28,12 @@ export class HomeService {
   selectCountry(countryCode: string) {
     this.selectedCountry.set(countryCode);
   }
+
+  getCountryInfo(countryCode: string) {
+    return this.apiService.getCountryInfo(countryCode);
+  }
+
+  getNextPublicHoliday(countryCode: string) {
+    return this.apiService.getNextPublicHoliday(countryCode);
+  }
 }
