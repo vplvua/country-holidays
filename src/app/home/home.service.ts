@@ -2,7 +2,8 @@ import { inject, Injectable, signal } from '@angular/core';
 import { toSignal } from '@angular/core/rxjs-interop';
 
 import { ApiService } from '../api/api.service';
-import { Country } from '../models/models';
+import { Country, PublicHoliday } from '../models/models';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -35,5 +36,9 @@ export class HomeService {
 
   getNextPublicHoliday(countryCode: string) {
     return this.apiService.getNextPublicHoliday(countryCode);
+  }
+
+  getAllPublicHolidays(year: string, countryCode: string): Observable<PublicHoliday[]> {
+    return this.apiService.getPublicHolidays(year, countryCode);
   }
 }

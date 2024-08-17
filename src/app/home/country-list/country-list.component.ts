@@ -1,6 +1,6 @@
 import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
-import { MatCard } from '@angular/material/card';
 import {
+  MatCard,
   MatCardHeader,
   MatCardTitle,
   MatCardActions,

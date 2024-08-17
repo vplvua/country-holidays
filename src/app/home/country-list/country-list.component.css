@@ -29,7 +29,7 @@ mat-card-content {
 .scrollable-content {
   flex-grow: 1;
   overflow-y: auto;
-  height: 200px;
+  height: 180px;
 }
 
 mat-list {

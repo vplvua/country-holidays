@@ -1,1 +1,15 @@
-<p>ukraine-holidays works!</p>
+<mat-card appearance="outlined">
+  <mat-card-header>
+    <mat-card-title>{{ pageTitle }}</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <div class="flex-container">
+      <div class="flex-item" *ngFor="let holiday of holidays">
+        <p>
+          <b>{{ holiday.name }}</b>
+        </p>
+        <p>{{ holiday.date | date: 'dd.MM.yyy' }}</p>
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>

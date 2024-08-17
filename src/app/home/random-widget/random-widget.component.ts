@@ -30,8 +30,6 @@ export class RandomWidgetComponent implements OnChanges {
     const shuffled = [...this.countries].sort(() => 0.5 - Math.random());
     const selected = shuffled.slice(0, 3);
 
-    console.log('Selected countries:', selected);
-
     const requests = selected.map(country =>
       forkJoin({
         info: this.homeService.getCountryInfo(country.countryCode),

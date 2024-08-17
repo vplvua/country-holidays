@@ -22,9 +22,9 @@ export class ApiService {
       .pipe(shareReplay(1), catchError(this.handleError));
   }
 
-  getPublicHolidays(year: string, countryCode: string) {
+  getPublicHolidays(year: string, countryCode: string): Observable<PublicHoliday[]> {
     return this.http
-      .get(`${this.apiUrl}/api/v3/PublicHolidays/${year}/${countryCode}`)
+      .get<PublicHoliday[]>(`${this.apiUrl}/api/v3/PublicHolidays/${year}/${countryCode}`)
       .pipe(shareReplay(1), catchError(this.handleError));
   }
 
