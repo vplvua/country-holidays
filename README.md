@@ -5,6 +5,7 @@ Holiday Explorer is a web application built with Angular, allowing you to explor
 ## Technical Stack
 
 - Frontend Framework: Angular (version 18.2.0)
+- UI Component Library: Angular Material
 - Language: TypeScript
 - Styling: CSS
 - API Integration: HTTP Client Module
@@ -24,7 +25,7 @@ The application leverages the [Nager.Date API](https://github.com/nager/Nager.Da
 Before you begin, ensure you have met the following requirements:
 
 - You have installed the latest version of [Node.js and npm](https://nodejs.org/)
-- You have read [Angular's documentation](https://angular.io/docs).
+- You have read [Angular's documentation](https://angular.dev/overview).
 
 ## Installing Holiday Explorer
 

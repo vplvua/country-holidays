@@ -1,0 +1,31 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 16px;
+  height: calc(100vh - 104px);
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+.country-list {
+  grid-row: 1;
+  grid-column: 1;
+}
+
+.ukraines-holidays {
+  grid-row: 1 / -1;
+  grid-column: 2;
+}
+
+.random-country {
+  grid-row: 2;
+  grid-column: 1;
+}
+
+@media (max-width: 800px) {
+  .grid-container {
+    display: flex;
+    flex-direction: column;
+  }
+}
