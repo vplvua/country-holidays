@@ -1,6 +1,7 @@
 clean:
 	@echo "Cleaning up..."
 	rm -rf dist
+	ng cache clean
 
 ft:
 	@echo "Formatting code..."

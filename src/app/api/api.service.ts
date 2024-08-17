@@ -2,7 +2,7 @@ import { inject, Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { catchError, map, Observable, shareReplay, throwError } from 'rxjs';
 
-import { environment } from '../environment/environment';
+import { environment } from '../../environment/environment';
 import { Country, CountryInfo, PublicHoliday } from '../models/models';
 
 @Injectable({
