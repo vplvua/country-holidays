@@ -1,0 +1,36 @@
+<div class="year-navigation">
+  <button mat-icon-button (click)="decrementYear()" [disabled]="selectedYear <= years[0]">
+    <mat-icon>chevron_left</mat-icon>
+  </button>
+  <mat-form-field>
+    <mat-label>Choose a Year</mat-label>
+    <mat-select [(ngModel)]="selectedYear" (selectionChange)="onYearChange()">
+      @for (year of years; track year) {
+        <mat-option [value]="year">{{ year }}</mat-option>
+      }
+    </mat-select>
+  </mat-form-field>
+  <button
+    mat-icon-button
+    (click)="incrementYear()"
+    [disabled]="selectedYear >= years[years.length - 1]"
+  >
+    <mat-icon>chevron_right</mat-icon>
+  </button>
+</div>
+<mat-card appearance="outlined">
+  <mat-card-header>
+    <mat-card-title>{{ pageTitle }}</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <div class="flex-container">
+      <div class="flex-item" *ngFor="let holiday of countryHolidays">
+        <p>
+          <b>{{ holiday.name }}</b>
+        </p>
+        <p>Date: {{ holiday.date | date: 'dd.MM.yyy' }}</p>
+        <p>Type: {{ holiday.types }}</p>
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>
