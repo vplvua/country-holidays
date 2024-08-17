@@ -1,15 +1,24 @@
 import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
 import { MatCard, MatCardContent, MatCardHeader, MatCardTitle } from '@angular/material/card';
 import { NgFor, DatePipe } from '@angular/common';
+import { forkJoin } from 'rxjs';
 
 import { Country, CountryInfo, PublicHoliday } from '../../models/models';
 import { HomeService } from '../home.service';
-import { forkJoin } from 'rxjs';
+import { CountryLinkDirective } from '../../shared/country-link.directive';
 
 @Component({
   selector: 'app-random-widget',
   standalone: true,
-  imports: [MatCard, MatCardHeader, MatCardTitle, MatCardContent, NgFor, DatePipe],
+  imports: [
+    MatCard,
+    MatCardHeader,
+    MatCardTitle,
+    MatCardContent,
+    NgFor,
+    DatePipe,
+    CountryLinkDirective,
+  ],
   templateUrl: './random-widget.component.html',
   styleUrl: './random-widget.component.css',
 })

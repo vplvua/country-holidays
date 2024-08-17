@@ -2,7 +2,7 @@ import { inject, Injectable, signal } from '@angular/core';
 import { toSignal } from '@angular/core/rxjs-interop';
 
 import { ApiService } from '../api/api.service';
-import { Country, PublicHoliday } from '../models/models';
+import { Country, CountryInfo, PublicHoliday } from '../models/models';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -30,7 +30,7 @@ export class HomeService {
     this.selectedCountry.set(countryCode);
   }
 
-  getCountryInfo(countryCode: string) {
+  getCountryInfo(countryCode: string): Observable<CountryInfo> {
     return this.apiService.getCountryInfo(countryCode);
   }
 

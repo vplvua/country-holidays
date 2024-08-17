@@ -6,7 +6,7 @@
     <div class="flex-container">
       <div class="flex-item" *ngFor="let country of selectedCountries">
         <p>
-          <b>{{ country.info.commonName }}</b>
+          <span [appCountryLink]="country.info.countryCode">{{ country.info.commonName }}</span>
         </p>
         <p>{{ country.nextHoliday.name }}</p>
         <p>{{ country.nextHoliday.date | date: 'dd.MM.yyy' }}</p>

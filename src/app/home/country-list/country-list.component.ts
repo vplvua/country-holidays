@@ -15,6 +15,7 @@ import { MatIcon } from '@angular/material/icon';
 import { FormsModule } from '@angular/forms';
 
 import { Country } from '../../models/models';
+import { CountryLinkDirective } from '../../shared/country-link.directive';
 
 @Component({
   selector: 'app-country-list',
@@ -35,6 +36,7 @@ import { Country } from '../../models/models';
     MatLabel,
     MatIcon,
     FormsModule,
+    CountryLinkDirective,
   ],
   templateUrl: './country-list.component.html',
   styleUrl: './country-list.component.css',

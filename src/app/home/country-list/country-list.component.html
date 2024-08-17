@@ -17,7 +17,7 @@
     <div class="scrollable-content">
       <mat-list>
         <mat-list-item *ngFor="let country of filteredCountries; trackBy: trackByCountryCode">
-          <a>{{ country.name }}</a>
+          <span [appCountryLink]="country.countryCode">{{ country.name }}</span>
         </mat-list-item>
       </mat-list>
     </div>
