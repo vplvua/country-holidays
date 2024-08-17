@@ -1,5 +1,10 @@
 <div class="grid-container">
-  <div class="country-list box"><app-country-list /></div>
+  <div class="country-list">
+    <app-country-list [countries]="countries()" [isLoading]="isLoading()" />
+  </div>
   <div class="random-country box"><app-random-widget /></div>
   <div class="ukraines-holidays box"><app-ukraine-holidays /></div>
+</div>
+<div class="alert alert-danger" *ngIf="errorMessage">
+  {{ errorMessage }}
 </div>
